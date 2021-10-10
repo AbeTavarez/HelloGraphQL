@@ -4,15 +4,15 @@ const _ = require('lodash');
 const {
     GraphQLObjectType,
     GraphQLInt,
-    GraphQLString
+    GraphQLString,
+    GraphQLSchema
 } = graphql;
 
 // dummy data
 const users = [
-    {id: 3, firstName: 'Abe', age: 28},
-    {id: 11, firstName: 'Eren', age: 18}
+    {id: '3', firstName: 'Abe', age: 28},
+    {id: '11', firstName: 'Eren', age: 18}
 ]
-
 
 
 // This object tell graphql of how an user object 
@@ -41,4 +41,8 @@ const RootQuery = new GraphQLObjectType({
             }
         }
     }
+});
+
+module.exports = new GraphQLSchema({
+    query: RootQuery
 })

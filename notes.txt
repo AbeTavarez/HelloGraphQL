@@ -1,0 +1,19 @@
+@Notes on file server.js
+
+1- We installed: express, express-graphql, graphql and lodash.
+
+2- Initiated express and expressGraphQL :
+// had to add .graphqlHTTP at the end in order to work correctly
+const expressGraphQL = require('express-graphql').graphqlHTTP;
+// this also works
+const { graphqlHTTP } = require('express-graphql'); 
+
+3- App middleware and Create route for '/graphql', setup expressGraphQL with
+the schema and graphiql: true
+
+
+@Notes on schema.js:
+
+
+
+
